@@ -164,3 +164,14 @@ for (let i = 1; i < finances.length; i++) {
 }
 
 console.log(`Greatest decrease in Profit/Losses happened on ${decreaseDate} with an amount of ${greatestDecrease} `);
+
+
+//Financial Analysis sheet
+
+console.log(`Financial Analysis`);
+console.log(`...................`);
+console.log(`Total Months: ${totalNumberOfMonths}`);
+console.log(`Total: $${netTotalAmount}`);
+console.log(`Average Change: ${averageChanges}`);
+console.log(`Greatest Increase in Profits/Losses: ${increaseDate} ${greatestIncrease}`);
+console.log(`Greatest Decrease in Profits/Losses: ${decreaseDate} ${greatestDecrease}`);
