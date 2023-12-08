@@ -87,3 +87,80 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+// Task 1 - calculate the total number of months in the dataset:
+
+let totalNumberOfMonths = finances.length;
+console.log(`Total number of months in the dataset: ${totalNumberOfMonths}`);
+
+//Task 2- The net total amount of Profit/Losses over the entire period.
+
+let netTotalAmount = 0;
+
+for (let i = 0; i < finances.length; i++) {
+  netTotalAmount += finances[i][1];
+}
+console.log(`The net total amount of Profit/Losses over the entire period : ${netTotalAmount}`)
+
+//Task 3- The average of the **changes** in Profit/Losses over the entire period
+
+//Task 3a- track what the total change in Profit/Losses are from month to month
+
+//Task 3b- find the average.* (`Total/(Number of months - 1)`)
+
+let totalChange = 0;
+
+for (let i = 0; i < finances.length; i++) {
+
+  if ( i - 1 >= 0) {
+
+    change = finances[i][1] - finances[i - 1][1];
+
+    totalChange += change;
+  }
+}
+
+let averageChanges = totalChange / (finances.length - 1);
+
+console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
+
+// Task 4: The greatest increase in Profit/Losses (date and amount) over the entire period.
+
+let greatestIncrease = 0;
+let increaseDate = " " ;
+
+for (let i = 0; i < finances.length; i++) {
+  
+  if(i -1 >= 0 ) {
+
+    let change = finances[i][1] - finances[i -1 ][1];
+
+    if ( change > greatestIncrease) {
+
+      greatestIncrease = change;
+      increaseDate = finances[i][0];
+    }
+  }
+}
+
+console.log(`Greatest Increase in Profit/Losses happened on ${increaseDate} with an amount of ${greatestIncrease} `);
+
+//Task 5: 
+
+let greatestDecrease = 0;
+let decreaseDate = " " ;
+
+for (let i = 1; i < finances.length; i++) {
+
+  if (i - 1 >= 0) {
+
+    let change = finances[i][1] - finances[i - 1 ][1];
+
+    if ( change < greatestDecrease) {
+
+      greatestDecrease = change;
+      decreaseDate = finances[i][0];
+    }
+  }
+}
+
+console.log(`Greatest decrease in Profit/Losses happened on ${decreaseDate} with an amount of ${greatestDecrease} `);
