@@ -90,7 +90,7 @@ var finances = [
 // Task 1 - calculate the total number of months in the dataset:
 
 let totalNumberOfMonths = finances.length;
-console.log(`Total number of months in the dataset: ${totalNumberOfMonths}`);
+// console.log(`Total number of months in the dataset: ${totalNumberOfMonths}`);
 
 //Task 2- The net total amount of Profit/Losses over the entire period.
 
@@ -99,7 +99,7 @@ let netTotalAmount = 0;
 for (let i = 0; i < finances.length; i++) {
   netTotalAmount += finances[i][1];
 }
-console.log(`The net total amount of Profit/Losses over the entire period : ${netTotalAmount}`)
+// console.log(`The net total amount of Profit/Losses over the entire period : ${netTotalAmount}`)
 
 //Task 3- The average of the **changes** in Profit/Losses over the entire period
 
@@ -121,7 +121,7 @@ for (let i = 0; i < finances.length; i++) {
 
 let averageChanges = totalChange / (finances.length - 1);
 
-console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
+// console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
 
 // Task 4: The greatest increase in Profit/Losses (date and amount) over the entire period.
 
@@ -142,7 +142,7 @@ for (let i = 0; i < finances.length; i++) {
   }
 }
 
-console.log(`Greatest Increase in Profit/Losses happened on ${increaseDate} with an amount of ${greatestIncrease} `);
+// console.log(`Greatest Increase in Profit/Losses happened on ${increaseDate} with an amount of ${greatestIncrease} `);
 
 //Task 5: 
 
@@ -163,15 +163,25 @@ for (let i = 1; i < finances.length; i++) {
   }
 }
 
-console.log(`Greatest decrease in Profit/Losses happened on ${decreaseDate} with an amount of ${greatestDecrease} `);
+// console.log(`Greatest decrease in Profit/Losses happened on ${decreaseDate} with an amount of ${greatestDecrease} `);
 
 
 //Financial Analysis sheet
 
-console.log(`Financial Analysis`);
-console.log(`...................`);
-console.log(`Total Months: ${totalNumberOfMonths}`);
-console.log(`Total: $${netTotalAmount}`);
-console.log(`Average Change: ${averageChanges}`);
-console.log(`Greatest Increase in Profits/Losses: ${increaseDate} ${greatestIncrease}`);
-console.log(`Greatest Decrease in Profits/Losses: ${decreaseDate} ${greatestDecrease}`);
+// console.log(`Financial Analysis`);
+// console.log(`...................`);
+// console.log(`Total Months: ${totalNumberOfMonths}`);
+// console.log(`Total: $${netTotalAmount}`);
+// console.log(`Average Change: ${averageChanges}`);
+// console.log(`Greatest Increase in Profits/Losses: ${increaseDate} ${greatestIncrease}`);
+// console.log(`Greatest Decrease in Profits/Losses: ${decreaseDate} ${greatestDecrease}`);
+
+console.log(
+  ` Financial Analysis
+   ..................
+   Total Months: ${totalNumberOfMonths}
+   Total: $${netTotalAmount}
+   Average Change: ${averageChanges}
+   Greatest Increase in Profits/Losses: ${increaseDate} ($${greatestIncrease})
+   Greatest Decrease in Profits/Losses: ${decreaseDate} ($${greatestDecrease})`
+);
