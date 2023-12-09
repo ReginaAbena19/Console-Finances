@@ -176,6 +176,7 @@ for (let i = 1; i < finances.length; i++) {
 // console.log(`Greatest Increase in Profits/Losses: ${increaseDate} ${greatestIncrease}`);
 // console.log(`Greatest Decrease in Profits/Losses: ${decreaseDate} ${greatestDecrease}`);
 
+//display Financial Analysis Sheet 
 console.log(
   ` Financial Analysis
 ----------------------
