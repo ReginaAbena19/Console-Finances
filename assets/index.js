@@ -119,7 +119,7 @@ for (let i = 0; i < finances.length; i++) {
   }
 }
 
-let averageChanges = totalChange / (finances.length - 1);
+let averageChanges = Math.round(totalChange / (finances.length - 1) * 100)/100;
 
 // console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
 
