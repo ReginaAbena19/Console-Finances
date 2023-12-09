@@ -178,10 +178,10 @@ for (let i = 1; i < finances.length; i++) {
 
 console.log(
   ` Financial Analysis
-   ..................
-   Total Months: ${totalNumberOfMonths}
-   Total: $${netTotalAmount}
-   Average Change: ${averageChanges}
-   Greatest Increase in Profits/Losses: ${increaseDate} ($${greatestIncrease})
-   Greatest Decrease in Profits/Losses: ${decreaseDate} ($${greatestDecrease})`
+----------------------
+  Total Months: ${totalNumberOfMonths}
+  Total: $${netTotalAmount}
+  Average Change: ${averageChanges}
+  Greatest Increase in Profits/Losses: ${increaseDate} ($${greatestIncrease})
+  Greatest Decrease in Profits/Losses: ${decreaseDate} ($${greatestDecrease})`
 );
