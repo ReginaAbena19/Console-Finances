@@ -176,6 +176,17 @@ for (let i = 1; i < finances.length; i++) {
 // console.log(`Greatest Increase in Profits/Losses: ${increaseDate} ${greatestIncrease}`);
 // console.log(`Greatest Decrease in Profits/Losses: ${decreaseDate} ${greatestDecrease}`);
 
+//Refactoring above code 
+
+//Initialise variables
+let totalNumberOfMonths = 0;
+let netTotalAmount = 0;
+let averageChanges = 0;
+let greatestIncrease = 0;
+let increaseDate = " ";
+let greatestDecrease = 0;
+let decreaseDate = " " ;
+
 //display Financial Analysis Sheet 
 console.log(
   ` Financial Analysis
