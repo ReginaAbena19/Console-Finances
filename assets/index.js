@@ -87,81 +87,81 @@ let finances = [
   ['Feb-2017', 671099],
 ];
 
-// Task 1 - calculate the total number of months in the dataset:
+// // Task 1 - calculate the total number of months in the dataset:
 
-let totalNumberOfMonths = finances.length;
-// console.log(`Total number of months in the dataset: ${totalNumberOfMonths}`);
+// let totalNumberOfMonths = finances.length;
+// // console.log(`Total number of months in the dataset: ${totalNumberOfMonths}`);
 
-//Task 2- The net total amount of Profit/Losses over the entire period.
+// //Task 2- The net total amount of Profit/Losses over the entire period.
 
-let netTotalAmount = 0;
+// let netTotalAmount = 0;
 
-for (let i = 0; i < finances.length; i++) {
-  netTotalAmount += finances[i][1];
-}
-// console.log(`The net total amount of Profit/Losses over the entire period : ${netTotalAmount}`)
+// for (let i = 0; i < finances.length; i++) {
+//   netTotalAmount += finances[i][1];
+// }
+// // console.log(`The net total amount of Profit/Losses over the entire period : ${netTotalAmount}`)
 
-//Task 3- The average of the **changes** in Profit/Losses over the entire period
+// //Task 3- The average of the **changes** in Profit/Losses over the entire period
 
-//Task 3a- track what the total change in Profit/Losses are from month to month
+// //Task 3a- track what the total change in Profit/Losses are from month to month
 
-//Task 3b- find the average.* (`Total/(Number of months - 1)`)
+// //Task 3b- find the average.* (`Total/(Number of months - 1)`)
 
-let totalChange = 0;
+// let totalChange = 0;
 
-for (let i = 0; i < finances.length; i++) {
+// for (let i = 0; i < finances.length; i++) {
 
-  if ( i - 1 >= 0) {
+//   if ( i - 1 >= 0) {
 
-    change = finances[i][1] - finances[i - 1][1];
+//     change = finances[i][1] - finances[i - 1][1];
 
-    totalChange += change;
-  }
-}
+//     totalChange += change;
+//   }
+// }
 
-let averageChanges = Math.round(totalChange / (finances.length - 1) * 100)/100;
+// let averageChanges = Math.round(totalChange / (finances.length - 1) * 100)/100;
 
-// console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
+// // console.log(`Total change in profit/losses from month to month: ${totalChange} & average of the changes in profit/losses over the entire period ${averageChanges}`);
 
-// Task 4: The greatest increase in Profit/Losses (date and amount) over the entire period.
+// // Task 4: The greatest increase in Profit/Losses (date and amount) over the entire period.
 
-let greatestIncrease = 0;
-let increaseDate = " " ;
+// let greatestIncrease = 0;
+// let increaseDate = " " ;
 
-for (let i = 0; i < finances.length; i++) {
+// for (let i = 0; i < finances.length; i++) {
   
-  if(i -1 >= 0 ) {
+//   if(i -1 >= 0 ) {
 
-    let change = finances[i][1] - finances[i -1 ][1];
+//     let change = finances[i][1] - finances[i -1 ][1];
 
-    if ( change > greatestIncrease) {
+//     if ( change > greatestIncrease) {
 
-      greatestIncrease = change;
-      increaseDate = finances[i][0];
-    }
-  }
-}
+//       greatestIncrease = change;
+//       increaseDate = finances[i][0];
+//     }
+//   }
+// }
 
-// console.log(`Greatest Increase in Profit/Losses happened on ${increaseDate} with an amount of ${greatestIncrease} `);
+// // console.log(`Greatest Increase in Profit/Losses happened on ${increaseDate} with an amount of ${greatestIncrease} `);
 
-//Task 5: 
+// //Task 5: 
 
-let greatestDecrease = 0;
-let decreaseDate = " " ;
+// let greatestDecrease = 0;
+// let decreaseDate = " " ;
 
-for (let i = 1; i < finances.length; i++) {
+// for (let i = 1; i < finances.length; i++) {
 
-  if (i - 1 >= 0) {
+//   if (i - 1 >= 0) {
 
-    let change = finances[i][1] - finances[i - 1 ][1];
+//     let change = finances[i][1] - finances[i - 1 ][1];
 
-    if ( change < greatestDecrease) {
+//     if ( change < greatestDecrease) {
 
-      greatestDecrease = change;
-      decreaseDate = finances[i][0];
-    }
-  }
-}
+//       greatestDecrease = change;
+//       decreaseDate = finances[i][0];
+//     }
+//   }
+// }
 
 // console.log(`Greatest decrease in Profit/Losses happened on ${decreaseDate} with an amount of ${greatestDecrease} `);
 
@@ -180,12 +180,41 @@ for (let i = 1; i < finances.length; i++) {
 
 //Initialise variables
 let totalNumberOfMonths = 0;
+let totalChange = 0;
 let netTotalAmount = 0;
 let averageChanges = 0;
 let greatestIncrease = 0;
 let increaseDate = " ";
 let greatestDecrease = 0;
 let decreaseDate = " " ;
+
+// for loop to access data
+
+for (let i = 0; i < finances.length; i++) {
+
+  if (i - 1 >= 0) {
+
+    let change = finances[i][1] - finances[i - 1][1];
+
+    netTotalAmount += finances[i][1];
+    totalChange += change;
+
+    if (change > greatestIncrease) {
+
+      greatestIncrease = change;
+      increaseDate = finances[i][0];
+    }
+
+    if (change < greatestDecrease) {
+
+      greatestDecrease = change;
+      decreaseDate = finances[i][0];
+    }
+  }
+}
+
+//Finding the average
+averageChanges = Math.round(totalChange / (finances.length - 1) * 100)/100;
 
 //display Financial Analysis Sheet 
 console.log(
