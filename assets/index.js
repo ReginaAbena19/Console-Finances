@@ -125,7 +125,7 @@ averageChanges = Math.round(totalChange / (finances.length - 1) * 100)/100;
 //display Financial Analysis Sheet 
 console.log(
   ` Financial Analysis
-----------------------
+  -------------------
   Total Months: ${totalNumberOfMonths}
   Total: $${netTotalAmount}
   Average Change: ${averageChanges}
