@@ -97,7 +97,7 @@ let increaseDate = " ";
 let greatestDecrease = 0;
 let decreaseDate = " " ;
 
-// for loop to access data
+// for loop to access data & make calculations
 
 for (let i = 1; i < finances.length; i++) {
 
