@@ -39,6 +39,8 @@ I committed straight to main with very clear commit messages and history
 I used ES6 JavaScript hence the change from var to let
 I used temporal literals as an alternative to concatination for greater readability and to format the final result using multi-line strings & expressions
 
+code source can be found in assets/index.js
+
 ## Installation
 
 The challenge is deployed using Github Pages. The end result can be found here: https://reginaabena19.github.io/EDX-Console-Finances/ When viewing through the editor ensure live server is installed in order to run the index.html file in the browswer.
