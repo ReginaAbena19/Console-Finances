@@ -179,7 +179,7 @@ let finances = [
 //Refactoring above code 
 
 //Initialise variables
-let totalNumberOfMonths = 0;
+let totalNumberOfMonths = finances.length;
 let totalChange = 0;
 let netTotalAmount = finances[0][1];
 let averageChanges = 0;
