@@ -181,7 +181,7 @@ let finances = [
 //Initialise variables
 let totalNumberOfMonths = 0;
 let totalChange = 0;
-let netTotalAmount = 0;
+let netTotalAmount = finances[0][1];
 let averageChanges = 0;
 let greatestIncrease = 0;
 let increaseDate = " ";
@@ -190,9 +190,7 @@ let decreaseDate = " " ;
 
 // for loop to access data
 
-for (let i = 0; i < finances.length; i++) {
-
-  if (i - 1 >= 0) {
+for (let i = 1; i < finances.length; i++) {
 
     let change = finances[i][1] - finances[i - 1][1];
 
@@ -209,7 +207,6 @@ for (let i = 0; i < finances.length; i++) {
 
       greatestDecrease = change;
       decreaseDate = finances[i][0];
-    }
   }
 }
 
