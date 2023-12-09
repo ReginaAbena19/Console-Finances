@@ -34,6 +34,11 @@ When you open your code in the browser your resulting analysis should look simil
 
 Your final code should print the analysis to the console.
 
+## Workflow
+I committed straight to main with very clear commit messages and history
+I used ES6 JavaScript hence the change from var to let
+I used temporal literals as an alternative to concatination for greater readability 
+
 ## Installation
 
 The challenge is deployed using Github Pages. The end result can be found here: https://reginaabena19.github.io/EDX-Console-Finances/ When viewing through the editor ensure live server is installed in order to run the index.html file in the browswer.
