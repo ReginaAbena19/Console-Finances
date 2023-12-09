@@ -37,7 +37,7 @@ Your final code should print the analysis to the console.
 ## Workflow
 I committed straight to main with very clear commit messages and history
 I used ES6 JavaScript hence the change from var to let
-I used temporal literals as an alternative to concatination for greater readability 
+I used temporal literals as an alternative to concatination for greater readability and to format the final result using multi-line strings & expressions
 
 ## Installation
 
