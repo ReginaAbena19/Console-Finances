@@ -43,5 +43,5 @@ code source can be found in assets/index.js
 
 ## Installation
 
-The challenge is deployed using Github Pages. The end result can be found here: https://reginaabena19.github.io/EDX-Console-Finances/ When viewing through the editor ensure live server is installed in order to run the index.html file in the browswer.
+The challenge is deployed using Github Pages. The end result can be found here: https://reginaabena19.github.io/Console-Finances/ When viewing through the editor ensure live server is installed in order to run the index.html file in the browswer.
 
